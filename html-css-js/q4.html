@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Save to LocalStorage</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="clickBtn">Save</button>
+    <p id="showText"></p>
+
+    <script>
+        const input = document.getElementById('text');
+        const button = document.getElementById('clickBtn');
+        const showText = document.getElementById('showText');
+    button.addEventListener("click",function(){
+            const text = input.value;
+            localStorage.setItem('savedText', text);
+            showText.innerHTML = text;
+        });
+    </script>
+</body>
+</html> 
